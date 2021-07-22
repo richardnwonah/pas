@@ -16,9 +16,9 @@ if ($con->connect_errno) {
     exit();
 }
 
-/* check if server is alive */
+/* check if server is alive 
 if ($con->ping()) {
     printf ("Our connection is ok!\n");
 } else {
     printf ("Error: %s\n", $con->error);
-}
+}*/
