@@ -25,7 +25,7 @@ if(isset($_POST['username']) && isset($_POST['pass']))
                     header('location:admin/select.php');
                  }
                     else{
-                        header('location:approvePass.php');
+                        header("location:approvePass.php?id=$row->username");
                     }
         }
         else{
