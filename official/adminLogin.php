@@ -22,7 +22,7 @@ if(isset($_POST['username']) && isset($_POST['pass']))
                 
                  if($_SESSION['username'] == 'admin')
                  {
-                    header('location:admin/select.php');
+                    header('location:../admin/index.php');
                  }
                     else{
                         header("location:viewPass.php?id=$row->username");
@@ -44,13 +44,27 @@ if(isset($_POST['username']) && isset($_POST['pass']))
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../style/style.css"/>
+    <title>Admin Login</title>
 </head>
 <body>
+    
+<div id="header">
+    <h1>Wellspring University</h1>
+    <p>Online PAS Allocation System</p>
+</div>
+
+<div class="Form">
+        <h2>Admin Login</h2>
     <form action="" method="POST">   
         <input name="username" placeholder="User Name"/>
         <input name="pass" placeholder="Password"/>
         <input type="submit" name="submit" value="submit"/>
-    </form>     
+    </form> 
+</div> 
+    
+<div id='footer'>
+    <marquee>Developed by Rephael Leesi Mitee CNAS/17086</marquee>
+<div>
 </body>
 </html>

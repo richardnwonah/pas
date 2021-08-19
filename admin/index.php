@@ -13,10 +13,21 @@ require '../includes/connection.inc.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/adminStyle.css">
     <title>View Students</title>
 </head>
 <body>
-    <h1>View Students</h1>
+    <div id="header">
+    <h1>Wellspring University</h1>
+    <h3>Admin page</h3>
+    
+</div>
+
+<div id="sideBar">
+       <h3>side bar</h3>
+</div>
+<div id="main">
+        <p>View Students</p>
     <?php
     
     $sql = 'SELECT * FROM student';
@@ -46,7 +57,7 @@ require '../includes/connection.inc.php';
         echo "<td>".$row['level'];"</td>";
         echo "<td>".$row['mat_no'];"</td>";
         echo "<td>".$row['reg_no'];"</td>";
-       echo "<td> <a href='verifyPass.php?id=".$row['student_id']' "'; echo "<button>verity</button></td>"
+     //  echo "<td> <a href='verifyPass.php?id=".$row['student_id']' "'; echo "<button>verity</button></td>"
      echo"  </tr>";
 
     }  
@@ -57,5 +68,9 @@ else{
 }
     ?>
     </table>
+</div>
+<div id="footer">
+    <marquee>Developed by Rephael Leesi Mitee CNAS/17086</marquee>
+</div>
 </body>
 </html>
