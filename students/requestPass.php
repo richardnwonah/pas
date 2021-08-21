@@ -1,5 +1,5 @@
 <?php
-
+//db linkage
     require "../includes/connection.inc.php";
     if(isset($_POST['submit']))
     {
