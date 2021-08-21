@@ -26,11 +26,11 @@ if(isset($_POST['submit'])){
 </head>
 <body>
     <form action="" Method="POST">
-    <input placeholder="First Name" name="firstName"/>
-    <input placeholder="Last Name" name="lastName"/>
-    <input placeholder="Level" name="level"/>
-    <input placeholder="Matriculation Number" name="mat_no"/>
-    <input placeholder="Registration Number" name="reg_no"/>
+    <input placeholder="First Name" name="firstName"/>[<br><br>
+    <input placeholder="Last Name" name="lastName"/><br><br>
+    <input placeholder="Level" name="level"/><br><br>
+    <input placeholder="Matriculation Number" name="mat_no"/><br><br>
+    <input placeholder="Registration Number" name="reg_no"/><br><br>
     <input type="submit" value="submit" name="submit"/>
 </form>
 </body>
