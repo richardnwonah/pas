@@ -1,5 +1,5 @@
 <?php
-  //require '../includes/officialAuth.inc.php';
+  require '../official/adminLogin.php';
 require '../includes/connection.inc.php';
 
 

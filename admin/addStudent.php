@@ -1,4 +1,5 @@
 <?php
+require '../includes/officialAuth.inc.php';
 include '../includes/connection.inc.php';
 
 if(isset($_POST['submit'])){
@@ -26,7 +27,7 @@ if(isset($_POST['submit'])){
 </head>
 <body>
     <form action="" Method="POST">
-    <input placeholder="First Name" name="firstName"/>[<br><br>
+    <input placeholder="First Name" name="firstName"/><br><br>
     <input placeholder="Last Name" name="lastName"/><br><br>
     <input placeholder="Level" name="level"/><br><br>
     <input placeholder="Matriculation Number" name="mat_no"/><br><br>

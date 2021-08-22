@@ -14,7 +14,10 @@ body{
     text-align: center;
     font-family:Arial, Helvetica, sans-serif;
 }
-
+#list{
+    padding: 1%;
+    color: white;
+}
 #sideBar{
     width: 20%;
     float: left;

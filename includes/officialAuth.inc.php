@@ -4,6 +4,6 @@ session_start();
 
 if(!isset($_SESSION['username']))
 {
-    header('location: adminLogin.php');
+    header('location: ../official/adminLogin.php');
 }
 ?>

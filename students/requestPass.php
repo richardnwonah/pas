@@ -5,15 +5,12 @@
     {
         $date = $_POST['date'];
         $reason = $_POST['reason']; 
-        $student_id = 7;
+        $student_id = 8;
 
-        $sql = "INSERT INTO pass(id,date, reason, student_id) VALUES ('$student_id', '$date', '$reason', '$student_id')";
-        if (!$con->query($sql)){
-           echo "Sorry a problem occured, please check your details";
-        }
-        else{
-            echo "YOur Pass Has Been Requested Sucessfully";
-        }
+        $sql = "INSERT INTO pass(id ,date, reason, student_id) VALUES ('$student_id', '$date', '$reason', '$student_id')";
+        $con->query($sql);
+        echo $con->error;
+        
     }
 ?>
 <!DOCTYPE html>

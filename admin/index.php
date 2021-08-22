@@ -1,8 +1,7 @@
 <?php
 
 
-
-//require '../includes/officialAuth.inc.php';
+require '../includes/officialAuth.inc.php';
 require '../includes/connection.inc.php';
 
 ?>
@@ -24,10 +23,13 @@ require '../includes/connection.inc.php';
 </div>
 
 <div id="sideBar">
-       <h3>side bar</h3>
+       <ol>
+           <li id="list" style="padding: 7%; color:white;"><a href="addStudent.php">Add Student +</a></li>
+           <li id="list"><a href="logOut.php" style="padding: 7%; color:white;">Log out</a></li>
+</ol>
 </div>
 <div id="main">
-        <p>View Students</p>
+        <p><b>View Students</b></p><br>
     <?php
     
     $sql = 'SELECT * FROM student';
