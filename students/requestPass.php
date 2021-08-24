@@ -5,7 +5,7 @@
     {
         $date = $_POST['date'];
         $reason = $_POST['reason']; 
-        $student_id = 8;
+        $student_id = $_GET['id'];
 
         $sql = "INSERT INTO pass(id ,date, reason, student_id) VALUES ('$student_id', '$date', '$reason', '$student_id')";
         $con->query($sql);

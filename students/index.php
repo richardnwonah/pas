@@ -10,9 +10,12 @@ if(isset($_POST['mat_no']) && isset($_POST['reg_no']))
     $mat_no = $_POST['mat_no'];
     $reg_no = $_POST['reg_no'];
 
-    $sql = "SELECT * FROM student WHERE mat_no='$mat_no";
+    echo $mat_no; 
+
+    $sql = "SELECT * FROM student WHERE mat_no='$mat_no'";
     $result = $con->query($sql);
-    $row = $result->fetch_all();
+    echo $con->error;
+    $row = $result->fetch_object();
 
     if($row != null)
     { 

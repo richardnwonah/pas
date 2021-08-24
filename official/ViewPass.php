@@ -59,6 +59,6 @@ else{
 
         <br><br>
      
-<button>Log Out</button>
+<a href="logout.php"><button id="logoutBtn">Log Out</button></a>
 </body>
 </html>

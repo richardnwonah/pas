@@ -18,5 +18,7 @@ require '../includes/connection.inc.php';
     $con->query($sql);
     echo $con->error;
 
+    header('location: verifyPass.php');
+
 
 ?>

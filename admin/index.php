@@ -46,8 +46,8 @@ require '../includes/connection.inc.php';
         <th>Level</th>
         <th>Matriculation Number</th>
         <th>Registration Number</th>
-        <th>Delete</th>
-        <th>Update</th>
+        <!--<th>Delete</th>--!>
+      
         </tr>";
         echo  "<tr>";
     foreach($result as $row)
@@ -59,10 +59,8 @@ require '../includes/connection.inc.php';
         echo "<td>".$row['level'];"</td>";
         echo "<td>".$row['mat_no'];"</td>";
         echo "<td>".$row['reg_no'];"</td>";
-      echo sprintf("<td><a href='deleteStudent.php?id=%s'", $con->real_escape_string($row['mat_no'])); 
-      echo "<button>Delete</button></a></td>";
-      echo sprintf("<td><a href='editStudent.php?id=%s'", $con->real_escape_string($row['mat_no'])); 
-      echo "<button>Edit</button></a></td>";
+      //echo sprintf("<td><a href='deleteStudent.php?id=%s'", $con->real_escape_string($row['mat_no'])); 
+     // echo "<button>Delete</button></a></td>";
      echo"  </tr>";
 
     }  
