@@ -4,20 +4,19 @@
 require '../includes/officialAuth.inc.php';
 require '../includes/connection.inc.php';
 
-echo $_GET["id"];
+    $realAdmin;
+    $id = $_GET["id"];
+    $realAdmin = $_SESSION['username'];
+
+    if($realAdmin == 'cso')
+    {
+        $admin = 'csoVerification';
+    }
+    echo $id;
+    echo $admin;
+    $sql = "UPDATE pass SET $admin=1 WHERE student_id = $id";
+    $con->query($sql);
+    echo $con->error;
+
+
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verify Pass</title>
-    <link rel="stylesheet" href="../style/style.css"/>
-</head>
-<body>
-
-    
-</body>
-</html>
