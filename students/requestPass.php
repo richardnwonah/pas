@@ -9,7 +9,8 @@
 
         $sql = "INSERT INTO pass(id ,date, reason, student_id) VALUES ('$student_id', '$date', '$reason', '$student_id')";
         $con->query($sql);
-        echo $con->error;
+        echo "Pass Request successful";
+
         
     }
 ?>
