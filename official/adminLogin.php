@@ -58,7 +58,7 @@ if(isset($_POST['username']) && isset($_POST['pass']))
         <h2>Admin Login</h2>
     <form action="" method="POST">   
         <input name="username" placeholder="User Name"/>
-        <input name="pass" placeholder="Password"/>
+        <input name="pass" placeholder="Password" type="password"/>
         <input type="submit" name="submit" value="submit"/>
     </form> 
 </div> 

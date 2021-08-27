@@ -38,9 +38,12 @@
         <textarea name="reason" placeholder="Enter Reason For Pass"style="width: 70%; height: 80px;"></textarea>
         <input type="submit" name="submit" value="Request Pass"/>
     </form>
-    </div> 
 
     
+   <a href="viewPassDetails.php?id=<?php $student_id; ?>"> <button id="green">View Details of Perviously Recived pass</button></a>
+    
+    </div> 
+
 <div id='footer'>
     <marquee>Developed by Rephael Leesi Mitee CNAS/17086</marquee>
 <div>

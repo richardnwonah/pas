@@ -3,6 +3,7 @@
 
 //require '../includes/officialAuth.inc.php';
 require '../includes/connection.inc.php';
+$student_id = $_GET['id'];
 
 ?>
 
@@ -26,7 +27,7 @@ require '../includes/connection.inc.php';
         <p><b>View Pass</b></p><br>
     <?php
     
-    $sql = 'SELECT * FROM pass';
+    $sql = "SELECT * FROM pass WHERE student_id ='$student_id'";
     $result = $con->query($sql);
     
     if($result != null)
@@ -66,28 +67,11 @@ require '../includes/connection.inc.php';
 else{
     echo 'This row is empty';
 }
-/* echo  "<tr>";
-foreach($result as $row)
-{ 
 
-    echo "<td>".$row['student_id'];"</td>";
-    echo "<td>".$row['firstName'];"</td>";
-    echo "<td>".$row['lastName'];"</td>";
-    echo "<td>".$row['level'];"</td>";
-    echo "<td>".$row['mat_no'];"</td>";
-    echo "<td>".$row['reg_no'];"</td>";
-  //echo sprintf("<td><a href='deleteStudent.php?id=%s'", $con->real_escape_string($row['mat_no'])); 
- // echo "<button>Delete</button></a></td>";
- echo"  </tr>";
-
-}  
-
-}
-else{
-echo 'This row is empty';
-}*/
     ?>
     </table>
+
+    <a href="requestPass.php"><button>Go Back</button></a>
 </div>
 <div id="footer">
     <marquee>Developed by Rephael Leesi Mitee CNAS/17086</marquee>

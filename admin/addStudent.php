@@ -9,11 +9,14 @@ if(isset($_POST['submit'])){
     $level = $_POST['level'];
     $mat_no = $_POST['mat_no'];
     $reg_no = $_POST['reg_no'];
+    $parent_phone = $_POST['parent_phone'];
+    $student_phone = $_POST['student_phone'];
     
    
-    $sql = "INSERT INTO student(firstName, lastName, level, mat_no, reg_no) VALUES ('$firstName', '$lastName', '$level', '$mat_no', '$reg_no')";
+    $sql = "INSERT INTO student(firstName, lastName, level, mat_no, reg_no, parent_phone, student_phone) VALUES ('$firstName', '$lastName', '$level', '$mat_no', '$reg_no', '$parent_phone', '$student_phone')";
 
     $con->query($sql);
+        echo $con->error;
     header('location: index.php');
 }
 
@@ -37,6 +40,8 @@ if(isset($_POST['submit'])){
             <input placeholder="Level" name="level"/><br><br>
             <input placeholder="Matriculation Number" name="mat_no"/><br><br>
             <input placeholder="Registration Number" name="reg_no"/><br><br>
+            <input placeholder="parent phone" name="parent_phone"/><br><br>
+            <input placeholder="student phone" name="student_phone"/><br><br>
             <input type="submit" value="submit" name="submit"/>
         </form>
         </div>
